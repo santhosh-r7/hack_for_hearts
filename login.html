@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scan Hack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 style="text-align: center;">Scan Hack</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="d-flex justify-content-center mt-5">
+      <form class="w-50" onsubmit="return handleLogin(event)">
+        <div id="email" class="mb-3">
+          <label for="InputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>
+        </div>
+        <div id="password" class="mb-3">
+          <label for="InputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="InputPassword1" required>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="DoctorCheckbox">
+          <label class="form-check-label" for="DoctorCheckbox">Doctor</label>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="PatientCheckbox">
+          <label class="form-check-label" for="PatientCheckbox">Patient</label>
+        </div>
+        <div class="text-center"><button type="submit" class="btn btn-primary">Submit</button></div>
+      </form>
+    </div>
+    <script>
+      function handleLogin(event) {
+        event.preventDefault();
+        
+        const isDoctor = document.getElementById('DoctorCheckbox').checked;
+        const isPatient = document.getElementById('PatientCheckbox').checked;
+        
+        if (isDoctor && !isPatient) {
+          window.location.href = 'doctorlogin.html';
+        } else if (isPatient && !isDoctor) {
+          window.location.href = 'patientlogin.html';
+        } else {
+          alert('Please select either "Doctor" or "Patient".');
+        }
+      }
+    </script>
+  </body>
+</html>
