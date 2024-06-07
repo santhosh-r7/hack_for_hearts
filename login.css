@@ -1,0 +1,130 @@
+html{
+    opacity: 0;
+    animation: UpFade 1s ease-out forwards;
+    background-color: cadetblue;
+}
+
+h1{
+    text-align: center;
+    font-size: 100px;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0;
+    animation: DownFade 1s ease-out forwards;
+}
+
+.mb-3-health-symbol{
+    margin-left: 50px;
+    margin-right: 50px;
+    opacity: 0;
+    animation: rotateImage 1s ease-out forwards;
+}
+
+/* General form styling */
+form.w-50 {
+    font-family: monospace;
+    width: 50%;
+    margin: auto;
+}
+
+/* Email and password input styling */
+.form-control {
+    opacity: 0;
+    animation: RightFade 1s ease-out forwards;
+    font-weight: 300; /* Light weight */
+    transition: font-weight 0.3s ease; /* Smooth transition */
+}
+
+.form-control:hover {
+    font-weight: 700; /* Heavy weight */
+}
+
+/* Submit button styling */
+.btn-primary {
+    opacity: 0;
+    animation: UpFade 1s ease-out forwards;
+    font-weight: 300; /* Light weight */
+    transition: font-weight 0.3s ease; /* Smooth transition */
+}
+
+.btn-primary:hover {
+    font-weight: bold; /* Heavy weight */
+}
+
+/* Form label styling */
+.form-label {
+    opacity: 0;
+    animation: RightFade 1s ease-out forwards;
+    font-weight: 500; /* Medium weight for better readability */
+}
+
+/* Radio button label styling */
+.form-radio-label {
+    opacity: 0;
+    animation: RightFade 1s ease-out forwards;
+    font-weight: 500; /* Medium weight for better readability */
+}
+
+.form-radio-input{
+    opacity: 0;
+    animation: RightFade 1s ease-out forwards;
+}
+
+/* Center the form and adjust padding for a better look */
+.text-center {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Margin for form groups */
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+h1.delayed{
+    animation-delay: 0.5s;
+}
+
+@keyframes DownFade{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes RightFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes UpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateImage {
+    0% {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}

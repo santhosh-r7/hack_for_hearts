@@ -1,0 +1,30 @@
+.mb-3-health-symbol{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.form-label{
+    text-align: center;
+    font-family: monospace;
+}
+
+.form-select{
+    text-align: center;
+    font-family: monospace;
+}
+
+.btn-primary {
+    font-family: monospace;
+    font-weight: 300; /* Light weight */
+    transition: font-weight 0.3s ease; /* Smooth transition */
+}
+
+.btn-primary:hover {
+    font-weight: bold; /* Heavy weight */
+}
