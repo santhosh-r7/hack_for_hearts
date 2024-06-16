@@ -1,7 +1,7 @@
 import google.generativeai as genai
 import os
 
-genai.configure(api_key="AIzaSyBhyFFNAHyk6I-8akKm1oPIhO_IsKjGYxY")
+genai.configure(api_key="")
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 prompt = x+" explain any tecnical or medical terms in original words with explanation in bracket"
